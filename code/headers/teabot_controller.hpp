@@ -62,19 +62,19 @@ namespace r2d2::teabot {
          * Function that switches the current state leds
          * turning green on for waiting and red for steeping
          */
-        void update_leds();
+        int update_leds();
 
         /**
          * @brief
          * function that moves arm up or down depending on previous state
          */
-        void move_arm();
+        int move_arm();
 
         /**
          * @brief
          * function that use hwlib time now_us() function to evaluate
          * if required time for steeping the tea has passed
          */
-        void steeping();
+        int steeping();
     };
 } // namespace r2d2::teabot

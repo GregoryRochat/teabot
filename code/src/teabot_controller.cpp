@@ -14,6 +14,7 @@ namespace r2d2::teabot {
           button1(button1),
           button2(button2) {
         teabot_controller_c::cur_state = teabot_state::WAITING;
+        teabot_controller_c::prev_state = teabot_state::WAITING;
         teabot_controller_c::cur_tea_time = 240000000;
     }
 
@@ -75,7 +76,7 @@ namespace r2d2::teabot {
         }
     }
 
-    void teabot_controller_c::update_leds() {
+    int teabot_controller_c::update_leds() {
         if (teabot_controller_c::prev_state == teabot_state::WAITING) {
             teabot_controller_c::led_red.write(1);
             teabot_controller_c::led_green.write(0);

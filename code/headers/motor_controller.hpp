@@ -34,6 +34,6 @@ namespace r2d2::teabot {
          * @param
          * direction : hwlib::string containing directional input
          */
-        void move_arm(int direction);
+        int move_arm(int direction);
     };
 } // namespace r2d2::teabot
